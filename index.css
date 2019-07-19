@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+}
+
+.spring-body {
+  position: fixed;
+  /* width: 15vw; */
+  width: 100%;
+  overflow: hidden;
+  background: #87CEFA;
+  height: 100vh;
+}
+
+.cloud {
+  width: 400px;
+  height: 275px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40vh;
+  left: -20vw;
+}
+
+#cloud-back {
+  filter: url(#filter-back);
+  box-shadow: 300px 300px 30px -30px #fff;
+}
+
+#cloud-mid {
+  filter: url(#filter-mid);
+  box-shadow: 300px 340px 70px -60px rgba(158, 168, 179, 0.3);
+  left: -20vw;
+}
+
+#cloud-front {
+  filter: url(#filter-front);
+  box-shadow: 300px 370px 60px -100px rgba(0, 0, 0, 0.1);
+  left: -20vw;
+}
+
+.grassland {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4vw;
+  /* background: #009345; */
+  background: #a2e6cf;
+}
+
+.grass {
+  position: absolute;
+  bottom: 0;
+  border: 0.5vw solid #333;
+  border-color: transparent #6fb929 #6fb929 transparent;
+}
+
+.tree {
+  position: absolute;
+  right: 0;
+  bottom: 4vw;
+  height: 4vw;
+  width: 0.3vw;
+  background: #4b3c37;
+  box-shadow: -6px 10px 10px #999;
+}
+
+.tree:before, .tree:after {
+  width: 0.2vw;
+  height: 8vw;
+  background: #4b3c37;
+  content: '';
+  position: absolute;
+  right: 0.4vw;
+  bottom: 3vw;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+
+.tree:after {
+  height: 6vw;
+  right: 2.9vw;
+  transform: rotate(-63deg);
+}
+
+#flower {
+  position: absolute;
+  background: #dda8c6;
+  width: 7vw;
+  height: 9vw;
+  right: 0;
+  bottom: 4vw;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  box-shadow: -6px 10px 10px #999;
+}
+
+.petal {
+  width: 0.3vw;
+  height: 0.3vw;
+  border-radius: 100px;
+  background: linear-gradient(45deg, #fa8a9d, #fff);
+  position: absolute;
+  bottom: 0vw;
+  right: 0vw;
+}
+
+.grassone, .grasstwo, .grassthree {
+  position: absolute;
+  right: 0;
+  height: 4vw;
+  width: 1vw;
+  background: #72ccae;
+}
+
+.grasstwo {
+  right: 1vw;
+  top: 2vw;
+  width: 0.5vw;
+}
+
+.grassthree {
+  right: 1.5vw;
+  top: 3vw;
+  width: 0.5vw;
+}
+
+.grassfour {
+  position: absolute;
+  right: 2vw;
+  width: 97vw;
+  height: 0.5vw;
+  bottom: 0;
+  background: #72ccae;
+}
+
+.grassfive, .grasssix, .grassseven, .grasseight, .grassnine {
+  position: absolute;
+  background: #c6feeb;
+  width: 10vw;
+  height: 0.5vw;
+}
+
+.grasssix {
+  width: 7vw;
+  top: 0.5vw;
+}
+
+.grassseven {
+  width: 6vw;
+  top: 1vw;
+}
+
+.grasseight {
+  width: 5vw;
+  top: 1.5vw;
+}
+
+.grassnine {
+  width: 4vw;
+  top: 2vw;
+}
