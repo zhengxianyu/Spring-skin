@@ -4,6 +4,7 @@ $(function() {
     return num;
   }
 
+  // 一片片花瓣
   function penalStyle(rightMax, rightMin, bottomMax, bottomMin, petalIndex) {
     let petalStyle =
       'bottom: ' +
@@ -46,13 +47,13 @@ $(function() {
     $('#lawn').append(grass);
   }
 
+  // 一个个砖头
   function createBrickToWall (wallName) {
     let newBrick = document.createElement('div');
     newBrick.className = 'brick';
     $('#' + wallName).append(newBrick);
   }
 
-  // 一个个砖头
   for (let brickIndex = 0; brickIndex < 33; brickIndex ++) {
     createBrickToWall('wallone');
     createBrickToWall('walltwo');
@@ -64,6 +65,7 @@ $(function() {
     createBrickToWall('walleight');
   }
 
+  // 一滴滴雨滴
   function createRain(rainName) {
     for (let rainIndex = 0; rainIndex < 1000; rainIndex ++) {
       let rain = document.createElement('div');
