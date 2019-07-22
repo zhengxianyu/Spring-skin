@@ -328,12 +328,10 @@ body {
 }
 
 .rain-slow {
-  animation: RainMove 1.8s linear infinite;
-  /* animation-delay: 0.3s; */
+  animation: RainMove 1.3s linear infinite;
 }
 
 .rain-quike {
   animation: RainMove 1.5s linear infinite;
-  /* animation-delay: 0.1s; */
   opacity: 0.4
 }
