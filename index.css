@@ -180,7 +180,7 @@ body {
 
 @keyframes RainMove {
 	to {
-    transform: translateY(70vh);
+    transform: translateY(50vh);
     opacity: 0.3;
 	}
 }
