@@ -9,28 +9,48 @@
   </head>
   <body>
     <div class="spring-body">
-      <div id="cloud-part">
-        <div class="cloud" id="cloud-back"></div>
-        <div class="cloud" id="cloud-mid"></div>
-        <div class="cloud" id="cloud-front"></div>
-        <svg width="0" height="0"> 
-          <filter id="filter-back">
-            <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="0" />     
-            <feDisplacementMap  in="SourceGraphic" scale="170" />
-          </filter>
-            <filter id="filter-mid">
-            <feTurbulence type="fractalNoise"  baseFrequency="0.012" numOctaves="2" seed="0"/>
-            <feDisplacementMap  in="SourceGraphic" scale="150" />
-          </filter>
-          <filter id="filter-front">
-            <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="0"/>
-            <feDisplacementMap  in="SourceGraphic" scale="100" />
-          </filter>
+      <div class="sky">
+        <div class="sky-one"></div>
+        <div class="sky-two"></div>
+        <div class="sky-three"></div>
+      </div>
+      <div id="rain"></div>
+      <div class="cloud">
+        <div class="cloud-one"></div>
+        <div class="cloud-two"></div>
+        <div class="cloud-three"></div>
+      </div>
+      <div class="balloon">
+        <div class="balloon-pink"></div>
+        <svg id="balloonPinkLineSvg" width="30" height="200">
+          <path d="M15 0 Q20 25 20 75 T30 180"  fill="none"  stroke="black" stroke-width="1"></path>
         </svg>
+        <div class="balloon-yellow"></div>
+        <svg id="balloonYellowLineSvg" width="30" height="200">
+          <path d="M15 0 Q20 25 20 75 T30 180"  fill="none"  stroke="black" stroke-width="1"></path>
+        </svg>
+      </div>
+      <div class="wall">
+        <div id="wallone"></div>
+        <div id="walltwo">
+          <div class="half-brick"></div>
+        </div>
+        <div id="wallthree"></div>
+        <div id="wallfour">
+          <div class="half-brick"></div>
+        </div>
+        <div id="wallfive"></div>
+        <div id="wallsix">
+          <div class="half-brick"></div>
+        </div>
+        <div id="wallseven"></div>
+        <div id="walleight">
+          <div class="half-brick"></div>
+        </div>
       </div>
       <div class="tree">
         <div id="flower">
-          <div class="petal"></div>
+          <div class="petal  flowermove"></div>
         </div>
       </div>
       <div class="grassland">

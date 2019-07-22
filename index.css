@@ -7,34 +7,81 @@ body {
   /* width: 15vw; */
   width: 100%;
   overflow: hidden;
-  background: #87CEFA;
+  background: #adf1fc;
   height: 100vh;
 }
 
-.cloud {
-  width: 400px;
-  height: 275px;
-  border-radius: 50%;
+.sky {
   position: absolute;
-  top: -40vh;
-  left: -20vw;
+  top: 0;
 }
 
-#cloud-back {
-  filter: url(#filter-back);
-  box-shadow: 300px 300px 30px -30px #fff;
+.sky-one {
+  position: absolute;
+  height: 2vw;
+  width: 100vw;
+  background: #50e2fb;
 }
 
-#cloud-mid {
-  filter: url(#filter-mid);
-  box-shadow: 300px 340px 70px -60px rgba(158, 168, 179, 0.3);
-  left: -20vw;
+.sky-two {
+  position: absolute;
+  top:  2vw;
+  height: 4vw;
+  width: 100vw;
+  background: #84ebfc;
 }
 
-#cloud-front {
-  filter: url(#filter-front);
-  box-shadow: 300px 370px 60px -100px rgba(0, 0, 0, 0.1);
-  left: -20vw;
+.sky-three {
+  position: absolute;
+  top:  6vw;
+  height: 6vw;
+  width: 100vw;
+  background: #9feffd;
+}
+
+.cloud-one, .cloud-two, .cloud-three {
+  background: #fff;
+  width: 5vw;
+  height: 2vw;
+  border-radius: 50px;
+  position: absolute;
+  top: 3vw;
+  animation: FlyMove 35s linear infinite;
+}
+
+.cloud-three {
+  animation: FlyMove 38s linear infinite;
+}
+
+.cloud-one::before, .cloud-two:before, .cloud-three:before {
+  background: #fff;
+  content: "";
+  width: 3vw;
+  height: 1.3vw;
+  position: absolute;
+  top: -1vw;
+  left: 0.7vw;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}
+
+.cloud-one, .cloud-one::before {
+  background: #b0f2fd;
+}
+
+.cloud-two {
+  top: 5vw;
+  left: 10vw;
+  animation: FlyMove 37s linear infinite;
+}
+
+.cloud-two, .cloud-two::before {
+  background: #ebfbfe;
+}
+
+.cloud-three {
+  top: 9vw;
+  left: 5vw;
 }
 
 .grassland {
@@ -42,7 +89,6 @@ body {
   bottom: 0;
   width: 100%;
   height: 4vw;
-  /* background: #009345; */
   background: #a2e6cf;
 }
 
@@ -103,6 +149,46 @@ body {
   right: 0vw;
 }
 
+@keyframes Flowermove {
+  0% {
+    transform: translateX(-3vw) translateY(0);
+    opacity: 1;
+  }
+	100% {
+    transform: translateX(-10vw) translateY(90vh);
+    opacity: 0;
+	}
+}
+
+@keyframes BalloonMove {
+  0% {
+    transform: translateX(10vw) translateY(0vh);
+  }
+  100% {
+    transform: translateX(10vw) translateY(-150vh);
+  }
+}
+
+@keyframes FlyMove {
+  from {
+    transform: translateX(-15vw);
+	}
+	to {
+    transform: translateX(100vw);
+	}
+}
+
+@keyframes RainMove {
+	to {
+    transform: translateY(70vh);
+    opacity: 0.3;
+	}
+}
+
+.flowermove {
+  animation: Flowermove 5s linear infinite;
+}
+
 .grassone, .grasstwo, .grassthree {
   position: absolute;
   right: 0;
@@ -157,4 +243,97 @@ body {
 .grassnine {
   width: 4vw;
   top: 2vw;
+}
+
+.balloon {
+  position: absolute;
+  bottom: 0;
+  animation: BalloonMove 20s linear infinite;
+}
+
+.balloon-pink, .balloon-yellow {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  background: #faf9f9;
+  border-radius: 50% 50% 25% 50%;
+  transform: rotate(45deg);
+  box-shadow: 6px -14px 35px 3px #DDA8E7 inset;
+}
+
+.balloon-yellow  {
+  box-shadow: 6px -14px 35px 3px yellow inset;
+  left: 3vw;
+  bottom: -2vw;
+}
+
+.balloon-pink::after, .balloon-yellow::after {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  content: "";
+  display: block;
+  border: 8px solid transparent;
+  border-right-color: #DDA8E7;
+  transform: rotate(45deg);
+  border-radius: 50%;
+}
+
+.balloon-yellow::after {
+  border-right-color: yellow;
+}
+
+#balloonPinkLineSvg {
+  position: absolute;
+  top: 5.8vw;
+  left: 1.7vw;
+}
+
+#balloonYellowLineSvg {
+  position: absolute;
+  left: 4.7vw;
+  top: 2.9vw;
+}
+
+.wall {
+  position: absolute;
+  bottom: 4vw;
+  border-top: 4px solid #fff;
+  border-bottom: 3px solid #efefef;
+}
+
+#wallone, #walltwo, #wallthree, #wallfour, #wallfive, #wallsix, #wallseven, #walleight {
+  display: flex;
+}
+
+.brick, .half-brick {
+  width: 3vw;
+  height: 1vw;
+  border: 1px solid #fff;
+  background: burlywood;
+}
+
+.half-brick {
+  width: 1.5vw;
+}
+
+.rain, .rain-slow, .rain-quike {
+  position: absolute;
+  top: 0;
+  width: 0.03vw;
+  height: 3vw;
+  background: linear-gradient(45deg, #fff, transparent);
+  z-index: 1;
+  animation: RainMove 2s linear infinite;
+}
+
+.rain-slow {
+  animation: RainMove 1.8s linear infinite;
+  /* animation-delay: 0.3s; */
+}
+
+.rain-quike {
+  animation: RainMove 1.5s linear infinite;
+  /* animation-delay: 0.1s; */
+  opacity: 0.4
 }

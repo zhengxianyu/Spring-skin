@@ -1,7 +1,5 @@
 $(function() {
   function numberRandom(max, min) {
-    var numMax = max | 0;
-    var numMin = min | 0;
     var num = ( Math.random() * ( max - min ) + min ).toFixed( 2 )
     return num;
   }
@@ -47,4 +45,39 @@ $(function() {
     }
     $('#lawn').append(grass);
   }
+
+  function createBrickToWall (wallName) {
+    let newBrick = document.createElement('div');
+    newBrick.className = 'brick';
+    $('#' + wallName).append(newBrick);
+  }
+
+  // 一个个砖头
+  for (let brickIndex = 0; brickIndex < 33; brickIndex ++) {
+    createBrickToWall('wallone');
+    createBrickToWall('walltwo');
+    createBrickToWall('wallthree');
+    createBrickToWall('wallfour');
+    createBrickToWall('wallfive');
+    createBrickToWall('wallsix');
+    createBrickToWall('wallseven');
+    createBrickToWall('walleight');
+  }
+
+  function createRain(rainName) {
+    for (let rainIndex = 0; rainIndex < 1000; rainIndex ++) {
+      let rain = document.createElement('div');
+      rain.className = 'rain';
+      rain.style = 'left: ' + numberRandom(100, 0) + 'vw; top: ' + numberRandom(100, 0) + 'vw';
+      if (rainIndex % 3 == 0) {
+        rain.style = 'left: ' + numberRandom(100, 0) + 'vw; top: ' + numberRandom(100, 0) + 'vw';
+        rain.className = 'rain-quike';
+      } else if (rainIndex % 2 == 0) {
+        rain.style = 'left: ' + numberRandom(100, 0) + 'vw; top: ' + numberRandom(100, 0) + 'vw;';
+        rain.className = 'rain-slow';
+      }
+      $('#' + rainName).append(rain);
+    }
+  }
+  createRain('rain');
 })
