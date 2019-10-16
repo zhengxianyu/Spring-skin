@@ -4,10 +4,9 @@ body {
 
 .spring-body {
   position: fixed;
-  /* width: 15vw; */
-  width: 100%;
+  width: 15vw;
   overflow: hidden;
-  background: #adf1fc;
+  background: #ade3e3;
   height: 100vh;
 }
 
@@ -19,24 +18,24 @@ body {
 .sky-one {
   position: absolute;
   height: 2vw;
-  width: 100vw;
-  background: #50e2fb;
+  width: 15vw;
+  background: #5fb4b4;
 }
 
 .sky-two {
   position: absolute;
   top:  2vw;
   height: 4vw;
-  width: 100vw;
-  background: #84ebfc;
+  width: 15vw;
+  background: #78c7c7;
 }
 
 .sky-three {
   position: absolute;
   top:  6vw;
   height: 6vw;
-  width: 100vw;
-  background: #9feffd;
+  width: 15vw;
+  background: #96dada;
 }
 
 .cloud-one, .cloud-two, .cloud-three {
@@ -87,7 +86,7 @@ body {
 .grassland {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 15vw;
   height: 4vw;
   background: #a2e6cf;
 }
@@ -115,15 +114,15 @@ body {
   background: #4b3c37;
   content: '';
   position: absolute;
-  right: 0.4vw;
-  bottom: 3vw;
+  right: 0.3vw;
+  bottom: 2.05vw;
   transform: rotate(-6deg);
   z-index: 1;
 }
 
 .tree:after {
   height: 6vw;
-  right: 2.9vw;
+  right: 2.7vw;
   transform: rotate(-63deg);
 }
 
@@ -134,15 +133,15 @@ body {
   height: 9vw;
   right: 0;
   bottom: 4vw;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
   box-shadow: -6px 10px 10px #999;
 }
 
 .petal {
   width: 0.3vw;
   height: 0.3vw;
-  border-radius: 100px;
+  border-radius: 100%;
   background: linear-gradient(45deg, #fa8a9d, #fff);
   position: absolute;
   bottom: 0vw;
@@ -174,7 +173,7 @@ body {
     transform: translateX(-15vw);
 	}
 	to {
-    transform: translateX(100vw);
+    transform: translateX(15vw);
 	}
 }
 

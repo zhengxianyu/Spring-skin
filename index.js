@@ -38,7 +38,7 @@ $(function() {
   }
 
   // 一棵棵草
-  for (let grassIndex = 0; grassIndex < 100; grassIndex ++) {
+  for (let grassIndex = 0; grassIndex < 15; grassIndex ++) {
     let grass = document.createElement('div');
     grass.className = 'grass';
     if (grassIndex != 0) {
@@ -67,15 +67,33 @@ $(function() {
 
   // 一滴滴雨滴
   function createRain(rainName) {
-    for (let rainIndex = 0; rainIndex < 1000; rainIndex ++) {
+    for (let rainIndex = 0; rainIndex < 200; rainIndex ++) {
       let rain = document.createElement('div');
       rain.className = 'rain';
-      rain.style = 'left: ' + numberRandom(100, 0) + 'vw; top: ' + numberRandom(100, 0) + 'vw';
+      rain.style =
+        'left: ' +
+          numberRandom(15, 0) +
+        'vw; top: ' +
+          numberRandom(100, 0) +
+        'vw';
+
       if (rainIndex % 3 == 0) {
-        rain.style = 'left: ' + numberRandom(100, 0) + 'vw; top: ' + numberRandom(100, 0) + 'vw';
+        rain.style =
+          'left: ' +
+            numberRandom(15, 0) +
+          'vw; top: ' +
+            numberRandom(100, 0) +
+          'vw';
+
         rain.className = 'rain-quike';
       } else if (rainIndex % 2 == 0) {
-        rain.style = 'left: ' + numberRandom(100, 0) + 'vw; top: ' + numberRandom(100, 0) + 'vw;';
+        rain.style =
+          'left: ' +
+            numberRandom(15, 0) +
+          'vw; top: ' +
+            numberRandom(100, 0) +
+          'vw;';
+
         rain.className = 'rain-slow';
       }
       $('#' + rainName).append(rain);
